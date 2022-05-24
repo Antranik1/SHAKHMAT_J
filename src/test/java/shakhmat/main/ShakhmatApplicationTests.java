@@ -1,4 +1,4 @@
-package shakhmat_group.shakhmat;
+package shakhmat.main;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
