@@ -2,7 +2,9 @@ package shakhmat.repository;
 
 import java.util.List;
 
-import shakhmat.entity.DataEntity;
+import org.springframework.stereotype.Component;
+
+import shakhmat.entity.DetailsOuvertureEntity;
 
 /**
  * Classe de lecture du dossier src/main/resources/data pour récupérer les
@@ -19,5 +21,7 @@ public interface DataRepository {
 	 * 
 	 * @return liste des ouvertures
 	 */
-	public List<DataEntity> getAllOuvertures();
+	public List<DetailsOuvertureEntity> getAllOuvertures();
+	
+	public List<String> getOuvertures();
 }
