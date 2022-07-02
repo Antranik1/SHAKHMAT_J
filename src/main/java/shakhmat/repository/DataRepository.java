@@ -2,7 +2,7 @@ package shakhmat.repository;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import shakhmat.entity.DetailsOuvertureEntity;
 
@@ -13,15 +13,17 @@ import shakhmat.entity.DetailsOuvertureEntity;
  * @author ababoyan
  *
  */
+@Service
 public interface DataRepository {
 
-	/**
-	 * Permet de retourner toutes les ouvertures du dossier data sous forme de liste
-	 * d'entitié
-	 * 
-	 * @return liste des ouvertures
-	 */
-	public List<DetailsOuvertureEntity> getAllOuvertures();
-	
-	public List<String> getOuvertures();
+  /**
+   * Permet de retourner toutes les ouvertures du dossier data sous forme de
+   * liste
+   * d'entitié
+   * 
+   * @return liste des ouvertures
+   */
+  public List<DetailsOuvertureEntity> getAllOuvertures();
+
+  public List<String> getOuvertures();
 }
