@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.DatabindException;
 
 import shakhmat.repository.impl.DataRepositoryImpl;
 
-@SpringBootTest(classes = DataRepositoryImpl.class)
+@SpringBootTest(classes = { DataRepositoryImpl.class, RepositoryConfiguration.class })
 class DataRepositoryImplTest {
 
   private static final String RUY_LOPEZ = "ruyLopez";
