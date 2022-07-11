@@ -14,13 +14,13 @@ import java.util.List;
  * @author ababoyan
  *
  */
-public class DetailsOuvertureEntity {
+public class OuvertureRepositoryDTO {
 	
 	private String name;
 	private String variante;
 	private List<String> coups;
 	
-	public DetailsOuvertureEntity(String name, String variante, List<String> coups) {
+	public OuvertureRepositoryDTO(String name, String variante, List<String> coups) {
 		super();
 		this.name = name;
 		this.variante = variante;

@@ -1,10 +1,12 @@
 package shakhmat.repository;
 
+import java.io.IOException;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.databind.DatabindException;
 
-import shakhmat.entity.DetailsOuvertureEntity;
+import shakhmat.entity.OuvertureRepositoryDTO;
 
 /**
  * Classe de lecture du dossier src/main/resources/data pour récupérer les
@@ -13,7 +15,6 @@ import shakhmat.entity.DetailsOuvertureEntity;
  * @author ababoyan
  *
  */
-@Service
 public interface DataRepository {
 
   /**
@@ -23,7 +24,7 @@ public interface DataRepository {
    * 
    * @return liste des ouvertures
    */
-  public List<DetailsOuvertureEntity> getAllOuvertures();
+  public OuvertureRepositoryDTO findOuverture(String ouvertureName);
 
-  public List<String> getOuvertures();
+  public List<String> getAllOuverturesNames() throws StreamReadException, DatabindException, IOException;
 }

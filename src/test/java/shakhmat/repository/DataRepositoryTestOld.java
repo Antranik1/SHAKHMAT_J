@@ -15,7 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import shakhmat.entity.DetailsOuvertureEntity;
+import shakhmat.entity.OuvertureRepositoryDTO;
 import shakhmat.repository.impl.DataRepositoryImpl;
 
 public class DataRepositoryTestOld {
@@ -34,8 +34,8 @@ public class DataRepositoryTestOld {
 	/**
 	 * JDD
 	 */
-	public static DetailsOuvertureEntity testOkRuyLopez;
-	public static List<DetailsOuvertureEntity> testOkRuyLopezList = new ArrayList<>();
+	public static OuvertureRepositoryDTO testOkRuyLopez;
+	public static List<OuvertureRepositoryDTO> testOkRuyLopezList = new ArrayList<>();
 
 	@BeforeAll
 	static void setup() {
@@ -73,7 +73,7 @@ public class DataRepositoryTestOld {
 	@Test
 	public void testLectureRepertoireData() {
 		LOGGER.info("Ceci est un message de test");
-		List<DetailsOuvertureEntity> listeOuverture = dataRepo.getAllOuvertures();
+		List<OuvertureRepositoryDTO> listeOuverture = dataRepo.getAllOuvertures();
 
 		assertEquals(listeOuverture.get(0).getName(), testOkRuyLopezList.get(0).getName());
 		assertEquals(listeOuverture.get(0).getCoups().get(0), 
